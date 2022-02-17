@@ -606,7 +606,7 @@ h6 {
     top: 0;
     left: -100%;
     transition: left 0.3s ease 0s;
-    background: linear-gradient(90deg, rgba(51, 60, 164, 0.7) 0%, rgba(51, 102, 158, 0.7) 100%);
+    background: linear-gradient(90deg, #333ca4 0%, #33669e 100%);
     padding-right: 0.9375rem;
     padding-left: 0.9375rem;
     padding-bottom: 1.875rem;
@@ -629,7 +629,7 @@ h6 {
     top: 0;
     left: -100%;
     transition: left 0.3s ease 0s;
-    background: linear-gradient(135deg, rgba(51, 60, 164, 0.7) 5%, rgba(51, 102, 158, 0.7) 100%);
+    background: linear-gradient(135deg, #333ca4 5%, #33669e 100%);
   }
   @supports (min-height: clamp( 5.625rem , 3.6025280899rem  +  10.1123595506vw , 11.25rem )) {
     .menu__body::before {
