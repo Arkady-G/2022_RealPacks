@@ -809,8 +809,7 @@ h6 {
 }
 
 .mainpage__main-block {
-  position: relative;
-  background: linear-gradient(140deg, rgba(0, 0, 142, 0.62) 50%, rgba(1, 114, 128, 0.68) 100%), url(../img/mainpage/ML1A9415+copy.jpg) 0 100% no-repeat;
+  background: linear-gradient(140deg, rgba(0, 0, 142, 0.62) 50%, rgba(1, 114, 128, 0.68) 100%), url("../img/mainpage/ML1A9415.jpg") 0 100% no-repeat;
 }
 
 .main-block {
