@@ -1326,8 +1326,11 @@ h6 {
 }
 
 .for-suppliers__body {
+  display: flex;
+  flex-direction: column;
   padding: 0px 0.9375rem 0px 0.9375rem;
-  padding: 0px 0px 100px 0px;
+  padding-bottom: 100px;
+  margin: 0px -25px 0px -25px;
 }
 .for-suppliers__block-header {
   padding: 0px 0.9375rem 0px 0.9375rem;
@@ -1343,6 +1346,7 @@ h6 {
   }
 }
 .for-suppliers__items {
+  flex: 1 1 auto;
   display: flex;
   height: 100%;
 }
