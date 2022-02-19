@@ -1325,29 +1325,29 @@ h6 {
   }
 }
 
-.marketplace__body {
+.for-suppliers__body {
   padding: 0px 0.9375rem 0px 0.9375rem;
   padding: 0px 0px 100px 0px;
 }
-.marketplace__block-header {
+.for-suppliers__block-header {
   padding: 0px 0.9375rem 0px 0.9375rem;
 }
 @supports (margin-bottom: clamp( 1.875rem , 1.4255617978rem  +  2.2471910112vw , 3.125rem )) {
-  .marketplace__block-header {
+  .for-suppliers__block-header {
     margin-bottom: clamp( 1.875rem , 1.4255617978rem  +  2.2471910112vw , 3.125rem );
   }
 }
 @supports not (margin-bottom: clamp( 1.875rem , 1.4255617978rem  +  2.2471910112vw , 3.125rem )) {
-  .marketplace__block-header {
+  .for-suppliers__block-header {
     margin-bottom: calc(1.875rem + 1.25 * (100vw - 20rem) / 55.625);
   }
 }
-.marketplace__items {
+.for-suppliers__items {
   display: flex;
   height: 100%;
 }
 @media (max-width: 61.99875em) {
-  .marketplace__items {
+  .for-suppliers__items {
     flex-wrap: wrap;
   }
 }
@@ -1397,7 +1397,7 @@ h6 {
   }
 }
 
-.item-marketplace {
+.item-for-suppliers {
   flex: 0 1 100%;
   display: flex;
   flex-direction: column;
@@ -1405,31 +1405,31 @@ h6 {
   align-items: center;
 }
 @supports (padding-left: clamp( 0.9375rem , 0.3757022472rem  +  2.808988764vw , 2.5rem )) {
-  .item-marketplace {
+  .item-for-suppliers {
     padding-left: clamp( 0.9375rem , 0.3757022472rem  +  2.808988764vw , 2.5rem );
   }
 }
 @supports not (padding-left: clamp( 0.9375rem , 0.3757022472rem  +  2.808988764vw , 2.5rem )) {
-  .item-marketplace {
+  .item-for-suppliers {
     padding-left: calc(0.9375rem + 1.5625 * (100vw - 20rem) / 55.625);
   }
 }
 @supports (padding-right: clamp( 0.9375rem , 0.3757022472rem  +  2.808988764vw , 2.5rem )) {
-  .item-marketplace {
+  .item-for-suppliers {
     padding-right: clamp( 0.9375rem , 0.3757022472rem  +  2.808988764vw , 2.5rem );
   }
 }
 @supports not (padding-right: clamp( 0.9375rem , 0.3757022472rem  +  2.808988764vw , 2.5rem )) {
-  .item-marketplace {
+  .item-for-suppliers {
     padding-right: calc(0.9375rem + 1.5625 * (100vw - 20rem) / 55.625);
   }
 }
-.item-marketplace__image {
+.item-for-suppliers__image {
   position: relative;
   width: 100%;
   padding: 0px 0px 70% 0px;
 }
-.item-marketplace__img {
+.item-for-suppliers__img {
   position: absolute;
   top: 0;
   left: 0;
@@ -1437,7 +1437,7 @@ h6 {
   height: 100%;
   object-fit: cover;
 }
-.item-marketplace__block-description {
+.item-for-suppliers__block-description {
   display: flex;
   flex: 1 1 100%;
   width: 90%;
@@ -1446,57 +1446,57 @@ h6 {
   transform: translate(0px, -15%);
 }
 @supports (padding: clamp( 0.625rem , -0.0491573034rem  +  3.3707865169vw , 2.5rem )) {
-  .item-marketplace__block-description {
+  .item-for-suppliers__block-description {
     padding: clamp( 0.625rem , -0.0491573034rem  +  3.3707865169vw , 2.5rem );
   }
 }
 @supports not (padding: clamp( 0.625rem , -0.0491573034rem  +  3.3707865169vw , 2.5rem )) {
-  .item-marketplace__block-description {
+  .item-for-suppliers__block-description {
     padding: calc(0.625rem + 1.875 * (100vw - 20rem) / 55.625);
   }
 }
 @media (max-width: 93.74875rem) {
-  .item-marketplace__block-description {
+  .item-for-suppliers__block-description {
     transform: translate(0px, -6%);
   }
 }
 @media (max-width: 61.99875em) {
-  .item-marketplace__block-description {
+  .item-for-suppliers__block-description {
     transform: translate(0px, -25%);
   }
 }
-.item-marketplace__title {
+.item-for-suppliers__title {
   font-family: "Montserrat";
   font-weight: 800;
   line-height: 1.3;
   color: #FFFFFF;
 }
 @supports (font-size: clamp( 1.125rem , 1.0800561798rem  +  0.2247191011vw , 1.25rem )) {
-  .item-marketplace__title {
+  .item-for-suppliers__title {
     font-size: clamp( 1.125rem , 1.0800561798rem  +  0.2247191011vw , 1.25rem );
   }
 }
 @supports not (font-size: clamp( 1.125rem , 1.0800561798rem  +  0.2247191011vw , 1.25rem )) {
-  .item-marketplace__title {
+  .item-for-suppliers__title {
     font-size: calc(1.125rem + 0.125 * (100vw - 20rem) / 55.625);
   }
 }
-.item-marketplace__title:not(:last-child) {
+.item-for-suppliers__title:not(:last-child) {
   margin-bottom: 1.25rem;
 }
-.item-marketplace__text {
+.item-for-suppliers__text {
   flex: 1 1 100%;
   font-weight: 400;
   line-height: 1.4705882353;
   color: #e1e1e1;
 }
 @supports (font-size: clamp( 1.0625rem , 1.0400280899rem  +  0.1123595506vw , 1.125rem )) {
-  .item-marketplace__text {
+  .item-for-suppliers__text {
     font-size: clamp( 1.0625rem , 1.0400280899rem  +  0.1123595506vw , 1.125rem );
   }
 }
 @supports not (font-size: clamp( 1.0625rem , 1.0400280899rem  +  0.1123595506vw , 1.125rem )) {
-  .item-marketplace__text {
+  .item-for-suppliers__text {
     font-size: calc(1.0625rem + 0.0625 * (100vw - 20rem) / 55.625);
   }
 }
