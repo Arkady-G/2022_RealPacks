@@ -3302,7 +3302,6 @@
             observeParents: true,
             slidesPerView: 1,
             spaceBetween: 40,
-            autoHeight: true,
             speed: 1e3,
             loop: true,
             lazy: true,
