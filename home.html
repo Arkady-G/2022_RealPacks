@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220221134356">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220221213545">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -272,6 +272,40 @@
 					</div>
 				</div>
 			</section>
+			<section class="mainpage__order-form order-form">
+				<div class="order-form__container">
+					<div class="order-form__body">
+						<div class="order-form__info-block">
+							<div class="order-form__block-header block-header block-header_left">
+								<h2 class="block-header__title">Сделать заявку</h2>
+								<div class="block-header__description block-header__description_left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis nihil dolorem similique cum quos mollitia animi repellat sunt sapiente. In unde tenetur dolorem repudiandae? Perferendis aliquam odio impedit culpa iusto.</div>
+							</div>
+							<div class="order-form__call-up call-up">
+								<div class="call-up__title">Получить консультации</div>
+								<a href="tel:+74953645959" class="call-up__number-phone"><span>+7 (495) 364 59 59</span></a>
+							</div>
+						</div>
+						<div class="order-form__form-block">
+							<form action="#" class="order-form__order-block">
+								<div class="order-form__order-name">
+									<label for="name" class="order-form__label">Имя *</label>
+									<input autocomplete="off" id="name" name="name" type="text" data-requered data-validate placeholder="Введите имя" data-error="Введите ваше имя" class="order-form__input">
+								</div>
+								<div class="order-form__order-pnone">
+									<label for="phone" class="order-form__label">Телефон *</label>
+									<input type="tel" name="phone" id="phone" data-requered data-validate placeholder="Введите телефон" data-error="Введите номер телефона" class="order-form__input">
+								</div>
+								<div class="order-form__checkbox-agreement checkbox">
+									<input id="checkboxAgreement" name="checkboxAgreement" checked data-error="Необходимо согласие" data-requered="checkbox" type="checkbox" value="1" class="checkbox__input">
+									<label for="checkboxAgreement" class="checkbox__label"><span class="order-form__label-text">Даю согласие на обработку персональных данных в соответствии с <a href="#/" class="order-form__link-agreement">Условиями&nbsp;*</a></span></label>
+								</div>
+								<div class="order-form__block-button"><button type="submit" class="order-form__button button">Отправить</button></div>
+							</form>
+						</div>
+					</div>
+				</div>
+
+			</section>
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
@@ -290,7 +324,7 @@
 </div>
  -->
 
-	<script src="js/app.min.js?_v=20220221134356"></script>
+	<script src="js/app.min.js?_v=20220221213545"></script>
 </body>
 
 </html>

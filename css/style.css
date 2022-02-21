@@ -357,6 +357,16 @@ h6 {
   margin: 0 auto;
 }
 
+.form__input {
+  border: 0.0625rem solid #2b2b2b00;
+}
+.form__error {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #c33c42;
+  padding: 0.625rem 1.25rem 0.1875rem 0px;
+}
+
 .button {
   position: relative;
   z-index: 2;
@@ -413,6 +423,138 @@ h6 {
   display: none;
 }
 
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.input {
+  border-radius: 0 !important;
+  width: 100%;
+  display: block;
+  padding: 0px 20px;
+  border: 1px solid #eee;
+}
+textarea.input {
+  resize: none;
+  padding: 0px 0px;
+}
+
+.checkbox {
+  position: relative;
+}
+.checkbox:not(:last-child) {
+  margin-bottom: 0.3125em;
+}
+.checkbox__input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+.checkbox__input:focus + .checkbox__label:before {
+  box-shadow: 0 0 0.125rem #19456B;
+}
+.checkbox__input:checked + .checkbox__label:before {
+  font-family: "icons";
+  font-weight: 100;
+  content: "\e911";
+  font-size: 0.8125rem;
+  opacity: 0.8;
+  color: #19456B;
+  background: #FFFFFF;
+}
+.checkbox__label {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  gap: 0.625rem;
+  border: 0.0625rem solid transparent;
+}
+.checkbox__label:before {
+  content: "";
+  align-self: flex-start;
+  flex: 0 0 1.125rem;
+  width: 1.125rem;
+  height: 1.125rem;
+  border: 0.0625rem solid rgba(25, 69, 107, 0.2);
+}
+.checkbox__label a {
+  color: #19456B;
+}
+body::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease 0s;
+  pointer-events: none;
+  z-index: 149;
+}
+
+.popup-show body::after {
+  opacity: 1;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 30px 10px;
+  transition: visibility 0.8s ease 0s;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.popup_show {
+  z-index: 150;
+  visibility: visible;
+  overflow: auto;
+  pointer-events: auto;
+}
+
+.popup_show .popup__content {
+  visibility: visible;
+  transform: scale(1);
+}
+
+.popup__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100%;
+  flex: 1 1 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup__content {
+  visibility: hidden;
+  transform: scale(0);
+  transition: transform 0.3s ease 0s;
+  background-color: #eee;
+  padding: 20px;
+  width: 100%;
+  max-width: 900px;
+  border-radius: 20px;
+}
+.lock .popup__content {
+  visibility: visible;
+}
+
 [class*=-ibg] {
   position: relative;
 }
@@ -434,6 +576,10 @@ h6 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.block-header_left {
+  align-items: start;
+  text-align: left;
 }
 .block-header__title {
   max-width: 40.625rem;
@@ -473,6 +619,9 @@ h6 {
   .block-header__description {
     font-size: calc(1.125rem + -0.0625 * (100vw - 20rem) / 55.625);
   }
+}
+.block-header__description_left {
+  text-align: left;
 }
 
 .header {
@@ -963,7 +1112,17 @@ h6 {
     margin-bottom: calc(3.125rem + 3.125 * (100vw - 20rem) / 55.625);
   }
 }
-.mainpage__steps-cooperation {
+@supports (margin-bottom: clamp( 3.125rem , 2.0014044944rem  +  5.6179775281vw , 6.25rem )) {
+  .mainpage__steps-cooperation:not(:last-child) {
+    margin-bottom: clamp( 3.125rem , 2.0014044944rem  +  5.6179775281vw , 6.25rem );
+  }
+}
+@supports not (margin-bottom: clamp( 3.125rem , 2.0014044944rem  +  5.6179775281vw , 6.25rem )) {
+  .mainpage__steps-cooperation:not(:last-child) {
+    margin-bottom: calc(3.125rem + 3.125 * (100vw - 20rem) / 55.625);
+  }
+}
+.mainpage__order-form {
   margin-bottom: 100px;
 }
 
@@ -2411,6 +2570,100 @@ h6 {
 .item-steps__text {
   line-height: 1.4705882353;
   color: #382933;
+}
+
+.order-form__body {
+  display: flex;
+  margin: 0px -30px 0px -30px;
+}
+@media (max-width: 47.99875em) {
+  .order-form__body {
+    flex-wrap: wrap;
+  }
+}
+.order-form__info-block {
+  padding: 0px 30px 0px 30px;
+}
+@supports (margin-bottom: clamp( 1.25rem , 0.5758426966rem  +  3.3707865169vw , 3.125rem )) {
+  .order-form__block-header:not(:last-child) {
+    margin-bottom: clamp( 1.25rem , 0.5758426966rem  +  3.3707865169vw , 3.125rem );
+  }
+}
+@supports not (margin-bottom: clamp( 1.25rem , 0.5758426966rem  +  3.3707865169vw , 3.125rem )) {
+  .order-form__block-header:not(:last-child) {
+    margin-bottom: calc(1.25rem + 1.875 * (100vw - 20rem) / 55.625);
+  }
+}
+.order-form__call-up {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  color: #19456B;
+}
+.order-form__call-up span {
+  font-weight: 800;
+  font-size: 3rem;
+  line-height: 1.7083333333;
+  color: #00008e;
+}
+.order-form__order-block {
+  padding: 4.375rem 2.5rem 4.6875rem 2.5rem;
+  box-shadow: 0px 0.125rem 1.5625rem rgba(0, 0, 142, 0.152619);
+}
+.order-form__form-block {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 1.875rem 0px 1.875rem;
+}
+.order-form__order-name {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1.25rem auto 1.875rem;
+}
+.order-form__order-name:not(:last-child) {
+  margin-bottom: 0.9375rem;
+}
+.order-form__label {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.2142857143;
+  color: #6d6d6d;
+}
+.order-form__label:not(:last-child) {
+  margin-bottom: 0.3125rem;
+}
+.order-form__input {
+  max-width: 16.875rem;
+  height: 2.8125rem;
+  font-weight: 400;
+  line-height: 1.4705882353;
+  color: #382933;
+  border: 1px solid rgba(25, 69, 107, 0.2);
+}
+.order-form__input._form-error {
+  border: 1px solid #c33c42;
+}
+.order-form__order-pnone {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20px auto 30px;
+}
+.order-form__order-pnone:not(:last-child) {
+  margin-bottom: 0.9375rem;
+}
+.order-form__checkbox-agreement:not(:last-child) {
+  margin-bottom: 2.8125rem;
+}
+.order-form__label-text {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.2142857143;
+  color: #6d6d6d;
+}
+.order-form__block-button {
+  display: flex;
+  justify-content: end;
 }
 .swiper {
   overflow: hidden;
