@@ -473,7 +473,6 @@ textarea.input {
   display: inline-flex;
   align-items: center;
   position: relative;
-  gap: 0.625rem;
   border: 0.0625rem solid transparent;
 }
 .checkbox__label:before {
@@ -482,6 +481,7 @@ textarea.input {
   flex: 0 0 1.125rem;
   width: 1.125rem;
   height: 1.125rem;
+  margin-right: 0.625rem;
   border: 0.0625rem solid rgba(25, 69, 107, 0.2);
 }
 .checkbox__label a {
