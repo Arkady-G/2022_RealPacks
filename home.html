@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220221225513">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220222082150">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -286,17 +286,17 @@
 							</div>
 						</div>
 						<div class="order-form__form-block">
-							<form action="#" class="order-form__order-block">
+							<form data-dev action="#" class="order-form__order-block">
 								<div class="order-form__order-name">
 									<label for="name" class="order-form__label">Имя *</label>
-									<input autocomplete="off" id="name" name="name" type="text" data-requered data-validate placeholder="Введите имя" data-error="Введите ваше имя" class="order-form__input">
+									<input autocomplete="off" id="name" name="name" type="text" data-requered="text" data-validate placeholder="Введите имя" data-error="Введите ваше имя" class="order-form__input">
 								</div>
 								<div class="order-form__order-pnone">
 									<label for="phone" class="order-form__label">Телефон *</label>
-									<input type="tel" name="phone" id="phone" data-requered data-validate placeholder="Введите телефон" data-error="Введите номер телефона" class="order-form__input">
+									<input type="tel" name="phone" id="phone" data-requered="tel" data-validate placeholder="Введите телефон" data-error="Введен не верный номер" class="order-form__input">
 								</div>
 								<div class="order-form__checkbox-agreement checkbox">
-									<input id="checkboxAgreement" name="checkboxAgreement" checked data-error="Необходимо согласие" data-requered="checkbox" type="checkbox" value="1" class="checkbox__input">
+									<input autocomplete="off" id="checkboxAgreement" name="checkboxAgreement" checked data-error="Необходимо согласие" data-requered="checkbox" type="checkbox" value="1" class="checkbox__input">
 									<label for="checkboxAgreement" class="checkbox__label"><span class="order-form__label-text">Даю согласие на обработку персональных данных в соответствии с <a href="#/" class="order-form__link-agreement">Условиями&nbsp;*</a></span></label>
 								</div>
 								<div class="order-form__block-button"><button type="submit" class="order-form__button button">Отправить</button></div>
@@ -323,7 +323,7 @@
 </div>
  -->
 
-	<script src="js/app.min.js?_v=20220221225513"></script>
+	<script src="js/app.min.js?_v=20220222082150"></script>
 </body>
 
 </html>
