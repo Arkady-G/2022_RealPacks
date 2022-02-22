@@ -1169,14 +1169,14 @@ body::after {
   max-width: 60rem;
   height: 100%;
 }
-@supports (padding0right: clamp( 0.9375rem , 0.3757022472rem  +  2.808988764vw , 2.5rem )) {
+@supports (padding-right: clamp( 0.9375rem , 0.3757022472rem  +  2.808988764vw , 2.5rem )) {
   .main-slider__description {
-    padding0right: clamp( 0.9375rem , 0.3757022472rem  +  2.808988764vw , 2.5rem );
+    padding-right: clamp( 0.9375rem , 0.3757022472rem  +  2.808988764vw , 2.5rem );
   }
 }
-@supports not (padding0right: clamp( 0.9375rem , 0.3757022472rem  +  2.808988764vw , 2.5rem )) {
+@supports not (padding-right: clamp( 0.9375rem , 0.3757022472rem  +  2.808988764vw , 2.5rem )) {
   .main-slider__description {
-    padding0right: calc(0.9375rem + 1.5625 * (100vw - 20rem) / 55.625);
+    padding-right: calc(0.9375rem + 1.5625 * (100vw - 20rem) / 55.625);
   }
 }
 .main-slider__title {
