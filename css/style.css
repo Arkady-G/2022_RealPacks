@@ -424,12 +424,7 @@ h6 {
 }
 
 .button-new {
-  display: grid;
-  grid-template-columns: 12.5rem 2.75rem;
-  grid-template-rows: 2.75rem;
-  justify-content: center;
-  align-items: center;
-  padding-left: 1.125rem;
+  padding: 0.875rem 0rem 0.875rem 1.125rem;
   padding-right: 0;
   background: #0f0fb1;
   font-family: "Montserrat";
@@ -438,6 +433,7 @@ h6 {
   line-height: 0.8181818182;
   text-align: center;
   color: #ececec;
+  max-width: 14.375rem;
   border: 0.0625rem solid transparent;
   transition: all 0.5s ease 0s;
   cursor: pointer;
@@ -446,13 +442,14 @@ h6 {
   font-family: "icons";
   content: "\e901";
   color: #FFFFFF;
-  font-size: 1.125rem;
-  margin-left: -0.25rem;
-  padding: 0.9375rem 0.875rem 0.9375rem 0.875rem;
+  font-size: 1.0625rem;
+  margin-right: 0rem;
+  margin-left: 1.25rem;
+  padding: 0.75rem 1.125rem 0.875rem 1.125rem;
   height: 100%;
   width: 2.75rem;
-  transform: translate(10%, 0%);
   background: #00008e;
+  border: 0.0625rem solid transparent;
 }
 @media (any-hover: hover) {
   .button-new:hover {
@@ -2819,6 +2816,10 @@ body::after {
   font-size: 0.875rem;
   line-height: 1.2142857143;
   color: #6d6d6d;
+}
+.order-form__block-button {
+  display: flex;
+  justify-content: end;
 }
 .swiper {
   overflow: hidden;
