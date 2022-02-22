@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220222164911">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220222212408">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -193,12 +193,8 @@
 								<picture><source srcset="img/mainpage/marketplace/ozon_02.webp" type="image/webp"><img src="img/mainpage/marketplace/ozon_02.jpg" alt="Image" class="marketplace-name__img"></picture>
 							</div>
 						</article>
-
 					</div>
-
 				</div>
-
-
 			</section>
 			<section class="mainpage__advantages advantages">
 				<div class="advantages__container">
@@ -248,6 +244,44 @@
 					</div>
 				</div>
 			</section>
+			<section class="mainpage__order-form order-form">
+				<div class="order-form__bg">
+					<picture><source srcset="img/mainpage/form-order.webp" type="image/webp"><img src="img/mainpage/form-order.jpg" alt="Image" class="order-form__image-bg"></picture>
+				</div>
+				<div class="order-form__container">
+					<div class="order-form__body">
+						<div class="order-form__info-block">
+							<div class="order-form__block-header block-header block-header_left">
+								<h2 class="block-header__title">Сделать заявку</h2>
+								<div class="block-header__description block-header__description_left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis nihil dolorem similique cum quos mollitia animi repellat sunt sapiente. In unde tenetur dolorem repudiandae? Perferendis aliquam odio impedit culpa iusto.</div>
+							</div>
+							<div class="order-form__call-up call-up">
+								<div class="call-up__title">Получить консультации</div>
+								<a href="tel:+74953645959" class="call-up__number-phone"><span>+7 (495) 364 59 59</span></a>
+							</div>
+						</div>
+						<div class="order-form__form-block">
+							<form data-dev action="#" class="order-form__order-block">
+								<div class="order-form__order-name">
+									<label for="name" class="order-form__label">Имя *</label>
+									<input autocomplete="off" id="name" name="name" type="text" data-requered="text" data-validate placeholder="Введите имя" data-error="Введите ваше имя" class="order-form__input">
+								</div>
+								<div class="order-form__order-pnone">
+									<label for="phone" class="order-form__label">Телефон *</label>
+									<input type="tel" name="phone" id="phone" data-requered="tel" data-validate placeholder="Введите телефон" data-error="Введен не верный номер" class="order-form__input">
+								</div>
+								<div class="order-form__checkbox-agreement checkbox">
+									<input id="checkboxAgreement" name="agreement" checked data-error="Необходимо согласие" data-requered="checkbox" type="checkbox" value="1" class="checkbox__input">
+									<label for="checkboxAgreement" class="checkbox__label"><span class="order-form__label-text">Даю согласие на обработку персональных данных в соответствии с <a href="#/" class="order-form__link-agreement">Условиями&nbsp;*</a></span></label>
+								</div>
+								<div class="order-form__block-button">
+									<button type="submit" class="order-form__button-new button-form">Отправить заявку</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
 			<section class="mainpage__steps-cooperation steps-cooperation">
 				<div class="steps-cooperation__container">
 					<div class="steps-cooperation__body">
@@ -272,35 +306,58 @@
 					</div>
 				</div>
 			</section>
-			<section class="mainpage__order-form order-form">
-				<div class="order-form__container">
-					<div class="order-form__body">
-						<div class="order-form__info-block">
-							<div class="order-form__block-header block-header block-header_left">
-								<h2 class="block-header__title">Сделать заявку</h2>
-								<div class="block-header__description block-header__description_left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis nihil dolorem similique cum quos mollitia animi repellat sunt sapiente. In unde tenetur dolorem repudiandae? Perferendis aliquam odio impedit culpa iusto.</div>
-							</div>
-							<div class="order-form__call-up call-up">
-								<div class="call-up__title">Получить консультации</div>
-								<a href="tel:+74953645959" class="call-up__number-phone"><span>+7 (495) 364 59 59</span></a>
-							</div>
+			<section class="mainpage__reviews reviews">
+				<div class="reviews__container">
+					<div class="reviews__body">
+						<div class="reviews__block-header block-header">
+							<h2 class="block-header__title">Отзывы наших клиентов</h2>
 						</div>
-						<div class="order-form__form-block">
-							<form data-dev action="#" class="order-form__order-block">
-								<div class="order-form__order-name">
-									<label for="name" class="order-form__label">Имя *</label>
-									<input autocomplete="off" id="name" name="name" type="text" data-requered="text" data-validate placeholder="Введите имя" data-error="Введите ваше имя" class="order-form__input">
+						<div class="reviews__slider slider-reviews swiper">
+							<div class="slider-reviews__wrapper swiper-wrapper">
+								<div class="slider-reviews__slide swiper-slide">
+									<div class="slider-reviews__text-block">
+										<div class="slider-reviews__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia cupiditate eum dolores, porro ullam expedita quibusdam unde voluptatibus. Quaerat, Lorem ipsum dolor sit amet consectetur adipisicing elit. cupiditate fugit quo eveniet ratione delectus quae corporis laudantium totam nesciunt?</div>
+										<div class="slider-reviews__author">
+											<div class="slider-reviews__block-photo">
+												<picture><source srcset="img/mainpage/ivanov.webp" type="image/webp"><img src="img/mainpage/ivanov.jpg" alt="Photo" class="slider-reviews__photo"></picture>
+											</div>
+											<div class="slider-reviews__aurhor-description">
+												<div class="slider-reviews__name">Ипатов Вячеслав</div>
+												<div class="slider-reviews__position">Предприниматель</div>
+											</div>
+										</div>
+									</div>
 								</div>
-								<div class="order-form__order-pnone">
-									<label for="phone" class="order-form__label">Телефон *</label>
-									<input type="tel" name="phone" id="phone" data-requered="tel" data-validate placeholder="Введите телефон" data-error="Введен не верный номер" class="order-form__input">
+								<div class="slider-reviews__slide swiper-slide">
+									<div class="slider-reviews__text-block">
+										<div class="slider-reviews__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia cupiditate eum dolores, porro ullam expedita quibusdam unde voluptatibus. Quaerat, cupiditate fugit quo eveniet ratione delectus quae corporis laudantium totam nesciunt? Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+										<div class="slider-reviews__author">
+											<div class="slider-reviews__block-photo">
+												<picture><source srcset="img/mainpage/smirnova.webp" type="image/webp"><img src="img/mainpage/smirnova.jpg" alt="Photo" class="slider-reviews__photo"></picture>
+											</div>
+											<div class="slider-reviews__aurhor-description">
+												<div class="slider-reviews__name">Смирнова Ирина</div>
+												<div class="slider-reviews__position">Коммерческий директор</div>
+											</div>
+										</div>
+									</div>
 								</div>
-								<div class="order-form__checkbox-agreement checkbox">
-									<input autocomplete="off" id="checkboxAgreement" name="checkboxAgreement" checked data-error="Необходимо согласие" data-requered="checkbox" type="checkbox" value="1" class="checkbox__input">
-									<label for="checkboxAgreement" class="checkbox__label"><span class="order-form__label-text">Даю согласие на обработку персональных данных в соответствии с <a href="#/" class="order-form__link-agreement">Условиями&nbsp;*</a></span></label>
+								<div class="slider-reviews__slide swiper-slide">
+									<div class="slider-reviews__text-block">
+										<div class="slider-reviews__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia cupiditate eum dolores, porro ullam expedita quibusdam unde voluptatibus. Quaerat, Lorem ipsum dolor sit amet consectetur adipisicing elit. cupiditate fugit quo eveniet ratione delectus quae corporis laudantium totam nesciunt?</div>
+										<div class="slider-reviews__author">
+											<div class="slider-reviews__block-photo">
+												<picture><source srcset="img/mainpage/charitonov.webp" type="image/webp"><img src="img/mainpage/charitonov.jpg" alt="Photo" class="slider-reviews__photo"></picture>
+											</div>
+											<div class="slider-reviews__aurhor-description">
+												<div class="slider-reviews__name">Федулов Денис</div>
+												<div class="slider-reviews__position">Начальник отдела</div>
+											</div>
+										</div>
+									</div>
 								</div>
-								<div class="order-form__block-button block-button"><button type="submit" class="order-form__button-new button-new">Отправить заявку</button></div>
-							</form>
+							</div>
+							<div class="swiper-pagination"></div>
 						</div>
 					</div>
 				</div>
@@ -323,7 +380,7 @@
 </div>
  -->
 
-	<script src="js/app.min.js?_v=20220222164911"></script>
+	<script src="js/app.min.js?_v=20220222212408"></script>
 </body>
 
 </html>

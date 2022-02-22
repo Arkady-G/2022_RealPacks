@@ -321,6 +321,9 @@ h6 {
   font-size: inherit;
 }
 
+body {
+  background: #F2F2F2;
+}
 .lock body {
   overflow: hidden;
   touch-action: none;
@@ -423,7 +426,7 @@ h6 {
   display: none;
 }
 
-.button-new {
+.button-form {
   display: block;
   height: 100%;
   padding: 0.6875rem 0rem 0.6875rem 1.125rem;
@@ -439,7 +442,7 @@ h6 {
   transition: all 0.5s ease 0s;
   cursor: pointer;
 }
-.button-new::after {
+.button-form::after {
   font-family: "icons";
   content: "\e901";
   color: #FFFFFF;
@@ -455,13 +458,13 @@ h6 {
   transition: all 0.5s ease 0s;
 }
 @media (any-hover: hover) {
-  .button-new:hover {
+  .button-form:hover {
     color: #0f0fb1;
     background-color: #ececec;
     border: 1px solid #0f0fb1;
     transition: color 0.5s ease 0s;
   }
-  .button-new:hover::after {
+  .button-form:hover::after {
     color: #FFCC29;
   }
 }
@@ -1168,7 +1171,6 @@ body::after {
 .mainpage__order-form {
   margin-bottom: 100px;
 }
-
 .main-block {
   position: relative;
   z-index: 3;
@@ -2173,6 +2175,7 @@ body::after {
   justify-content: center;
   height: 100%;
   text-align: center;
+  background-color: #ffffff;
   box-shadow: 0px 0.125rem 1.5625rem rgba(0, 0, 142, 0.15);
 }
 @supports (padding-top: clamp( 0.9375rem , 0.3757022472rem  +  2.808988764vw , 2.5rem )) {
@@ -2616,7 +2619,21 @@ body::after {
 }
 
 .order-form__body {
+  position: relative;
+  z-index: 2;
+  margin-top: -20%;
   display: flex;
+  background: #F2F2F2;
+}
+@supports (padding-top: clamp( 1.875rem , 0.3019662921rem  +  7.8651685393vw , 6.25rem )) {
+  .order-form__body {
+    padding-top: clamp( 1.875rem , 0.3019662921rem  +  7.8651685393vw , 6.25rem );
+  }
+}
+@supports not (padding-top: clamp( 1.875rem , 0.3019662921rem  +  7.8651685393vw , 6.25rem )) {
+  .order-form__body {
+    padding-top: calc(1.875rem + 4.375 * (100vw - 20rem) / 55.625);
+  }
 }
 @supports (margin-left: clamp( -1.875rem , -0.6004213483rem  +  -1.6853932584vw , -0.9375rem )) {
   .order-form__body {
@@ -2701,7 +2718,7 @@ body::after {
   }
 }
 .order-form__form-block {
-  flex: 1 1 auto;
+  flex: 1 1 50%;
 }
 @supports (padding-left: clamp( 0.9375rem , 0.6004213483rem  +  1.6853932584vw , 1.875rem )) {
   .order-form__form-block {
@@ -2725,6 +2742,7 @@ body::after {
 }
 .order-form__order-block {
   display: grid;
+  background-color: #ffffff;
   box-shadow: 0px 0.125rem 1.5625rem rgba(0, 0, 142, 0.152619);
 }
 @supports (padding-top: clamp( 1.875rem , 0.9761235955rem  +  4.4943820225vw , 4.375rem )) {
@@ -2822,6 +2840,40 @@ body::after {
 .order-form__block-button {
   display: flex;
   justify-content: end;
+}
+.order-form__bg {
+  position: relative;
+  padding: 0px 0px 32% 0px;
+}
+.order-form__bg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(140deg, rgba(0, 0, 142, 0.62) 50%, rgba(1, 114, 128, 0.68) 100%);
+}
+.order-form__image-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider-reviews__author {
+  display: flex;
+  align-items: flex-end;
+}
+.slider-reviews__text-block {
+  padding: 80px 45px 0px 80px;
+}
+.slider-reviews__text {
+  padding: 80px 45px 140px 80px;
+  background: #ffffff;
+  box-shadow: 0px 2px 25px rgba(0, 0, 142, 0.152619);
 }
 .swiper {
   overflow: hidden;
