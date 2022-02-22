@@ -2776,6 +2776,10 @@ body::after {
   line-height: 1.2142857143;
   color: #6d6d6d;
 }
+.order-form__block-button {
+  display: flex;
+  justify-content: end;
+}
 .swiper {
   overflow: hidden;
 }
