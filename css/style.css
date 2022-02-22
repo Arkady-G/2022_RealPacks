@@ -425,7 +425,7 @@ h6 {
 
 .button-new {
   display: grid;
-  grid-template-columns: 9.375rem 2.75rem;
+  grid-template-columns: 12.5rem 2.75rem;
   grid-template-rows: 2.75rem;
   justify-content: center;
   align-items: center;
@@ -445,7 +445,7 @@ h6 {
 .button-new::after {
   position: relative;
   z-index: 2;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   font-family: "icons";
