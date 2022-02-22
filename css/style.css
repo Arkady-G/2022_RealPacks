@@ -2657,8 +2657,31 @@ body::after {
     font-size: calc(1.875rem + 1.125 * (100vw - 20rem) / 55.625);
   }
 }
-.order-form__order-block {
+.order-form__form-block {
   flex: 1 1 auto;
+}
+@supports (padding-left: clamp( 0.9375rem , 0.6004213483rem  +  1.6853932584vw , 1.875rem )) {
+  .order-form__form-block {
+    padding-left: clamp( 0.9375rem , 0.6004213483rem  +  1.6853932584vw , 1.875rem );
+  }
+}
+@supports not (padding-left: clamp( 0.9375rem , 0.6004213483rem  +  1.6853932584vw , 1.875rem )) {
+  .order-form__form-block {
+    padding-left: calc(0.9375rem + 0.9375 * (100vw - 20rem) / 55.625);
+  }
+}
+@supports (padding-right: clamp( 0.9375rem , 0.6004213483rem  +  1.6853932584vw , 1.875rem )) {
+  .order-form__form-block {
+    padding-right: clamp( 0.9375rem , 0.6004213483rem  +  1.6853932584vw , 1.875rem );
+  }
+}
+@supports not (padding-right: clamp( 0.9375rem , 0.6004213483rem  +  1.6853932584vw , 1.875rem )) {
+  .order-form__form-block {
+    padding-right: calc(0.9375rem + 0.9375 * (100vw - 20rem) / 55.625);
+  }
+}
+.order-form__order-block {
+  display: grid;
   box-shadow: 0px 0.125rem 1.5625rem rgba(0, 0, 142, 0.152619);
 }
 @supports (padding-top: clamp( 1.875rem , 0.9761235955rem  +  4.4943820225vw , 4.375rem )) {
@@ -2699,30 +2722,6 @@ body::after {
 @supports not (padding-right: clamp( 0.9375rem , 0.3757022472rem  +  2.808988764vw , 2.5rem )) {
   .order-form__order-block {
     padding-right: calc(0.9375rem + 1.5625 * (100vw - 20rem) / 55.625);
-  }
-}
-.order-form__form-block {
-  display: flex;
-  flex-direction: column;
-}
-@supports (padding-left: clamp( 0.9375rem , 0.6004213483rem  +  1.6853932584vw , 1.875rem )) {
-  .order-form__form-block {
-    padding-left: clamp( 0.9375rem , 0.6004213483rem  +  1.6853932584vw , 1.875rem );
-  }
-}
-@supports not (padding-left: clamp( 0.9375rem , 0.6004213483rem  +  1.6853932584vw , 1.875rem )) {
-  .order-form__form-block {
-    padding-left: calc(0.9375rem + 0.9375 * (100vw - 20rem) / 55.625);
-  }
-}
-@supports (padding-right: clamp( 0.9375rem , 0.6004213483rem  +  1.6853932584vw , 1.875rem )) {
-  .order-form__form-block {
-    padding-right: clamp( 0.9375rem , 0.6004213483rem  +  1.6853932584vw , 1.875rem );
-  }
-}
-@supports not (padding-right: clamp( 0.9375rem , 0.6004213483rem  +  1.6853932584vw , 1.875rem )) {
-  .order-form__form-block {
-    padding-right: calc(0.9375rem + 0.9375 * (100vw - 20rem) / 55.625);
   }
 }
 .order-form__order-name {
