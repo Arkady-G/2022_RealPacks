@@ -368,9 +368,7 @@ h6 {
 }
 
 .button {
-  position: relative;
-  z-index: 2;
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   padding: 1.375rem 0rem 1.375rem 1.125rem;
@@ -2778,6 +2776,44 @@ body::after {
 }
 .order-form__block-button {
   width: 270px;
+}
+.order-form__button-01 {
+  padding: 0.75rem 0rem 0.75rem 1.125rem;
+  background: #0f0fb1;
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 0.8181818182;
+  text-align: center;
+  color: #ececec;
+  max-width: 16.875rem;
+  height: 2.75rem;
+  border: 0.0625rem solid transparent;
+  transition: all 0.5s ease 0s;
+  cursor: pointer;
+}
+.order-form__button-01::after {
+  font-family: "icons";
+  content: "\e901";
+  color: #FFFFFF;
+  font-size: 1.125rem;
+  margin-left: 1.4375rem;
+  padding: 0.75rem 1.0625rem 0.75rem 1.1875rem;
+  border: 0.0625rem solid transparent;
+  transform: translate(10%, 0%);
+  background: #00008e;
+}
+@media (any-hover: hover) {
+  .order-form__button-01:hover {
+    color: #0f0fb1;
+    background-color: #ececec;
+    border: 1px solid #0f0fb1;
+    transition: color 0.5s ease 0s;
+  }
+  .order-form__button-01:hover::after {
+    color: #FFCC29;
+    transition: all 0.5s ease 0s;
+  }
 }
 .swiper {
   overflow: hidden;
