@@ -424,10 +424,13 @@ h6 {
 }
 
 .button-new {
-  display: flex;
+  display: grid;
+  grid-template-columns: 9.375rem 2.75rem;
+  grid-template-rows: 2.75rem;
   justify-content: center;
   align-items: center;
-  padding: 0.75rem 0rem 0.75rem 1.125rem;
+  padding-left: 1.125rem;
+  padding-right: 0;
   background: #0f0fb1;
   font-family: "Montserrat";
   font-weight: 500;
@@ -435,13 +438,13 @@ h6 {
   line-height: 0.8181818182;
   text-align: center;
   color: #ececec;
-  max-width: 14.375rem;
-  height: 2.75rem;
   border: 0.0625rem solid transparent;
   transition: all 0.5s ease 0s;
   cursor: pointer;
 }
 .button-new::after {
+  position: relative;
+  z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -449,10 +452,9 @@ h6 {
   content: "\e901";
   color: #FFFFFF;
   font-size: 1.125rem;
-  margin-left: 1.4375rem;
-  height: 2.75rem;
+  margin-left: -0.25rem;
+  height: 100%;
   width: 2.75rem;
-  border: 0.0625rem solid transparent;
   transform: translate(10%, 0%);
   background: #00008e;
 }
