@@ -397,7 +397,7 @@ h6 {
   width: 2.875rem;
   height: 2.875rem;
   transform: translate(10%, 0%);
-  background: #00008E;
+  background: #00008e;
 }
 @media (any-hover: hover) {
   .button:hover {
@@ -423,9 +423,27 @@ h6 {
   display: none;
 }
 
+@media (any-hover: hover) {
+  .block-button:hover::after {
+    color: #FFCC29;
+  }
+}
+.block-button::after {
+  font-family: "icons";
+  content: "\e901";
+  color: #FFFFFF;
+  font-size: 1.0625rem;
+  margin-right: 0rem;
+  padding: 0.75rem 1.125rem 0.875rem 1.125rem;
+  height: 100%;
+  width: 2.75rem;
+  background: #00008e;
+  border: 0.0625rem solid transparent;
+  cursor: pointer;
+}
+
 .button-new {
-  padding: 0.875rem 0rem 0.875rem 1.125rem;
-  padding-right: 0;
+  padding: 0.875rem 1.125rem 0.875rem 1.125rem;
   background: #0f0fb1;
   font-family: "Montserrat";
   font-weight: 500;
@@ -438,19 +456,6 @@ h6 {
   transition: all 0.5s ease 0s;
   cursor: pointer;
 }
-.button-new::after {
-  font-family: "icons";
-  content: "\e901";
-  color: #FFFFFF;
-  font-size: 1.0625rem;
-  margin-right: 0rem;
-  margin-left: 1.25rem;
-  padding: 0.75rem 1.125rem 0.875rem 1.125rem;
-  height: 100%;
-  width: 2.75rem;
-  background: #00008e;
-  border: 0.0625rem solid transparent;
-}
 @media (any-hover: hover) {
   .button-new:hover {
     color: #0f0fb1;
@@ -458,9 +463,8 @@ h6 {
     border: 1px solid #0f0fb1;
     transition: color 0.5s ease 0s;
   }
-  .button-new:hover::after {
+  .button-new:hover .block-button::after {
     color: #FFCC29;
-    transition: all 0.5s ease 0s;
   }
 }
 
