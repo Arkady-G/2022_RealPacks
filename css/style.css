@@ -2777,7 +2777,7 @@ body::after {
 .order-form__block-button {
   width: 270px;
 }
-.order-form__button-01 {
+.order-form__button-new {
   padding: 0.75rem 0rem 0.75rem 1.125rem;
   background: #0f0fb1;
   font-family: "Montserrat";
@@ -2792,7 +2792,7 @@ body::after {
   transition: all 0.5s ease 0s;
   cursor: pointer;
 }
-.order-form__button-01::after {
+.order-form__button-new::after {
   font-family: "icons";
   content: "\e901";
   color: #FFFFFF;
@@ -2804,13 +2804,13 @@ body::after {
   background: #00008e;
 }
 @media (any-hover: hover) {
-  .order-form__button-01:hover {
+  .order-form__button-new:hover {
     color: #0f0fb1;
     background-color: #ececec;
     border: 1px solid #0f0fb1;
     transition: color 0.5s ease 0s;
   }
-  .order-form__button-01:hover::after {
+  .order-form__button-new:hover::after {
     color: #FFCC29;
     transition: all 0.5s ease 0s;
   }
