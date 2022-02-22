@@ -383,7 +383,7 @@ h6 {
   color: #ececec;
   max-width: 16.875rem;
   height: 2.75rem;
-  border: 1px solid transparent;
+  border: 0.0625rem solid transparent;
   transition: all 0.5s ease 0s;
   cursor: pointer;
 }
@@ -2778,8 +2778,7 @@ body::after {
   color: #6d6d6d;
 }
 .order-form__block-button {
-  display: flex;
-  justify-content: end;
+  width: 270px;
 }
 .swiper {
   overflow: hidden;
