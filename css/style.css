@@ -672,9 +672,9 @@ body::after {
 
 .header {
   position: absolute;
-  width: 100%;
   top: 0;
   left: 0;
+  width: 100%;
   z-index: 50;
 }
 @supports (min-height: clamp( 2.5rem , -0.6460674157rem  +  15.7303370787vw , 11.25rem )) {
@@ -689,12 +689,12 @@ body::after {
 }
 .header._header-scroll {
   position: fixed;
-  transform: translate(0px, -100%);
+  top: -200%;
   background: linear-gradient(129.28deg, #00008e -89.49%, #017280 111.5%);
 }
 .header._header-show {
-  transition: transform 0.3s ease 0s;
-  transform: translate(0px, 0px);
+  transition: top 0.3s ease 0s;
+  top: 0;
 }
 .header__container_middle {
   border-bottom: 0.0625rem solid #bcbcbc;
