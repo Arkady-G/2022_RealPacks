@@ -2894,6 +2894,16 @@ body::after {
   object-fit: cover;
 }
 
+@supports (padding-bottom: clamp( 1.875rem , 0.3019662921rem  +  7.8651685393vw , 6.25rem )) {
+  .reviews__body {
+    padding-bottom: clamp( 1.875rem , 0.3019662921rem  +  7.8651685393vw , 6.25rem );
+  }
+}
+@supports not (padding-bottom: clamp( 1.875rem , 0.3019662921rem  +  7.8651685393vw , 6.25rem )) {
+  .reviews__body {
+    padding-bottom: calc(1.875rem + 4.375 * (100vw - 20rem) / 55.625);
+  }
+}
 @supports (margin-bottom: clamp( 0.9375rem , 0.8251404494rem  +  0.5617977528vw , 1.25rem )) {
   .reviews__block-header {
     margin-bottom: clamp( 0.9375rem , 0.8251404494rem  +  0.5617977528vw , 1.25rem );
@@ -3022,6 +3032,33 @@ body::after {
   font-weight: 400;
   line-height: 1.4705882353;
   color: #382933;
+}
+
+.swiper-pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-pagination-bullet {
+  border-radius: 50%;
+  flex: 0 0 0.875rem;
+  height: 0.875rem;
+  background: #000;
+  opacity: 0.2;
+  cursor: pointer;
+}
+.swiper-pagination-bullet:not(:last-child) {
+  margin-right: 0.4375rem;
+}
+@media (max-width: 47.99875em) {
+  .swiper-pagination-bullet:not(:last-child) {
+    margin-right: 0.875rem;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background: linear-gradient(129.28deg, #00008e -89.49%, #017280 111.5%);
+  opacity: 1;
 }
 .swiper {
   overflow: hidden;
