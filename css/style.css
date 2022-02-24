@@ -595,7 +595,6 @@ body::after {
   padding: 20px;
   width: 100%;
   max-width: 900px;
-  border-radius: 20px;
 }
 .lock .popup__content {
   visibility: visible;
