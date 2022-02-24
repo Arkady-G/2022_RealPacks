@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220224132614">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220224203027">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,7 +64,7 @@
 									</article>
 								</div>
 							</div>
-							<a href="#" data-popup="#popup" class="main-slider__button button">Сделать заявку</a>
+							<a href="#popup" class="main-slider__button button">Сделать заявку</a>
 						</div>
 					</div>
 				</div>
@@ -168,7 +168,7 @@
 										<div class="marketplace-name__text-features-item">Пользователей в месяц</div>
 									</div>
 								</div>
-								<a href="#" data-popup="#popup" class="marketplace-name__button button">Сделать заявку</a>
+								<a href="#popup" class="marketplace-name__button button">Сделать заявку</a>
 							</div>
 						</article>
 						<article class="marketplace-name__item marketplace-name__item_second">
@@ -185,7 +185,7 @@
 										<div class="marketplace-name__text-features-item">Заказов в сутки</div>
 									</div>
 								</div>
-								<a href="#" data-popup="#popup" class="marketplace-name__button button">Сделать заявку</a>
+								<a href="#popup" class="marketplace-name__button button">Сделать заявку</a>
 							</div>
 							<div data-da=".marketplace-name__item_first, 1119.98,first" class="marketplace-name__image">
 								<picture><source data-srcset="img/mainpage/marketplace/ozon_02.webp" type="image/webp"><img data-src="img/mainpage/marketplace/ozon_02.jpg" alt="Image" class="marketplace-name__img"></picture>
@@ -258,22 +258,22 @@
 								<a href="tel:+74953645959" class="call-up__number-phone"><span>+7 (495) 364 59 59</span></a>
 							</div>
 						</div>
-						<div class="order-form__form-block">
-							<form name="orderForm" data-dev action="#" class="order-form__order-block">
-								<div class="order-form__order-name">
-									<label for="name" class="order-form__label">Имя *</label>
-									<input autocomplete="off" id="name" name="name" type="text" data-requered="text" data-validate placeholder="Введите имя" data-error="Введите ваше имя" class="order-form__input">
+						<div class="order-form-block__form-block order-form-block">
+							<form id="orderForm" name="orderForm" class="order-form-block__order-block">
+								<div class="order-form-block__order-input">
+									<label for="orderName" class="order-form-block__label">Имя *</label>
+									<input autocomplete="off" id="orderName" name="orderName" type="text" placeholder="Введите имя" error="Введите ваше имя" class="order-form-block__input _req">
 								</div>
-								<div class="order-form__order-pnone">
-									<label for="phone" class="order-form__label">Телефон *</label>
-									<input type="tel" name="phone" id="phone" data-requered="tel" data-validate placeholder="Введите телефон" data-error="Введен не верный номер" class="order-form__input">
+								<div class="order-form-block__order-input">
+									<label for="orderPhone" class="order-form-block__label">Телефон *</label>
+									<input autocomplete="off" id="orderPhone" name="orderPhone" type="tel" placeholder="Введите телефон" error="Введен не верный номер" class="order-form-block__input _req _phone">
 								</div>
-								<div class="order-form__checkbox-agreement checkbox">
-									<input id="checkboxAgreement" name="agreement" checked data-error="Необходимо согласие" data-requered="checkbox" type="checkbox" value="1" class="checkbox__input">
-									<label for="checkboxAgreement" class="checkbox__label"><span class="order-form__label-text">Даю согласие на обработку персональных данных в соответствии с <a href="#/" class="order-form__link-agreement">Условиями&nbsp;*</a></span></label>
+								<div class="order-form-block__checkbox-agreement checkbox">
+									<input id="checkboxAgreement" name="checkboxAgreement" type="checkbox" checked error="Необходимо согласие" value="1" class="checkbox__input _req">
+									<label for="checkboxAgreement" class="checkbox__label"><span class="checkbox__label-text">Даю согласие на обработку персональных данных в соответствии с <a href="#/" class="checkbox__link-agreement">Условиями&nbsp;*</a></span></label>
 								</div>
-								<div class="order-form__block-button">
-									<button type="submit" class="order-form__button-new button-form">Отправить заявку</button>
+								<div class="order-form-block__block-button">
+									<button type="submit" class="order-form-block__button-new button-form">Отправить заявку</button>
 								</div>
 							</form>
 						</div>
@@ -422,18 +422,18 @@
 		</footer>
 	</div>
 
-	<div id="popup" aria-hidden="true" class="popup">
-		<div class="popup__wrapper">
-			<div class="popup__content">
-				<button data-close type="button" class="popup__close">Закрыть</button>
-				<div class="popup__text">
-				</div>
+	<!-- <div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">Закрыть</button>
+			<div class="popup__text">
 			</div>
 		</div>
 	</div>
+</div> -->
 
 
-	<script src="js/app.min.js?_v=20220224132614"></script>
+	<script src="js/app.min.js?_v=20220224203027"></script>
 </body>
 
 </html>
