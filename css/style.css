@@ -548,6 +548,66 @@ body {
   }
 }
 
+.bread-crumbs__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bread-crumbs__item:not(:last-child) {
+  color: #19456B;
+}
+.bread-crumbs__item:not(:last-child) .bread-crumbs__link-item {
+  cursor: pointer;
+}
+.bread-crumbs__item:not(:last-child)::after {
+  content: "/";
+  margin-right: 0.3125rem;
+  margin-left: 0.3125rem;
+}
+.bread-crumbs__link-item {
+  font-weight: 400;
+  line-height: 1.4705882353;
+  cursor: default;
+}
+
+.page-main-block {
+  position: relative;
+  z-index: 3;
+}
+.page-main-block__body {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-height: 38.125rem;
+}
+.page-main-block__content {
+  padding: 3.75rem 12.5rem 3.75rem 12.5rem;
+  background: #ffffff;
+  box-shadow: 0px 0.125rem 1.5625rem rgba(0, 0, 142, 0.152619);
+  transform: translate(0%, 50%);
+}
+.main-block-bg__bg {
+  height: 100%;
+}
+.main-block-bg__bg::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 0, 142, 0.8) 0%, rgba(1, 114, 128, 0.8) 100%);
+}
+.main-block-bg__image-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+}
+
 .header {
   position: absolute;
   top: 0;
@@ -939,6 +999,8 @@ body {
 }
 
 .footer {
+  position: relative;
+  z-index: 2;
   background: linear-gradient(135deg, #00008e 0%, #017280 100%);
 }
 @supports (padding-top: clamp( 1.875rem , 0.3019662921rem  +  7.8651685393vw , 6.25rem )) {
@@ -1159,6 +1221,10 @@ body {
   }
 }
 
+.form-subscribe {
+  display: flex;
+  align-items: center;
+}
 .form-subscribe__input {
   height: 3.4375rem;
   background: rgba(255, 255, 255, 0.1);
@@ -1179,6 +1245,8 @@ body {
 }
 
 .button-subscribe {
+  display: flex;
+  align-items: center;
   position: relative;
 }
 .button-subscribe::after {
@@ -1189,7 +1257,6 @@ body {
   font-family: "icons";
   font-size: 1.625rem;
   content: "\e92b";
-  top: -2.125rem;
   right: 0px;
   width: 3.5rem;
   height: 3.5rem;
@@ -3367,6 +3434,13 @@ body {
 .swiper-pagination-bullet-active {
   background: linear-gradient(129.28deg, #00008e -89.49%, #017280 111.5%);
   opacity: 1;
+}
+
+.contactpage {
+  position: relative;
+}
+.block-header__bread-crumbs:not(:last-child) {
+  margin-bottom: 1.25rem;
 }
 .swiper {
   overflow: hidden;
