@@ -4277,8 +4277,9 @@
                     if (response.ok) {
                         let result = await response.json();
                         alert(result.message);
-                        formPreview.innerHTML = "";
-                        formAddError.reset();
+                        orderForm.reset();
+                        orderForm.classList.remove("__sending");
+                        alert("Ваша заявка отправлена");
                     } else {
                         alert("Произошла ошибка");
                         orderForm.classList.remove("_sending");

@@ -1162,8 +1162,9 @@ body {
 .form-subscribe__input {
   height: 3.4375rem;
   background: rgba(255, 255, 255, 0.1);
-  border: 1px solid #e1e1e1;
+  border: 0.0625rem solid #e1e1e1;
   padding-left: 1.25rem;
+  padding-right: 4.375rem;
   color: #FFFFFF;
 }
 @supports (width: clamp( 18.125rem , 16.1025280899rem  +  10.1123595506vw , 23.75rem )) {
@@ -1175,6 +1176,25 @@ body {
   .form-subscribe__input {
     width: calc(18.125rem + 5.625 * (100vw - 20rem) / 55.625);
   }
+}
+
+.button-subscribe {
+  position: relative;
+}
+.button-subscribe::after {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  font-family: "icons";
+  font-size: 1.625rem;
+  content: "\e92b";
+  top: -2.125rem;
+  right: 0px;
+  width: 3.5rem;
+  height: 3.5rem;
+  color: #FFFFFF;
+  background: #00008e;
 }
 
 .middle-footer__contacts {
@@ -3089,12 +3109,18 @@ body {
   transition: all 0.5s ease 0s;
 }
 .order-form-block__order-input {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1.25rem auto 1.875rem;
+  display: flex;
+  flex-direction: column;
 }
-.order-form-block__order-input:not(:last-child) {
-  margin-bottom: 0.9375rem;
+@supports (margin-bottom: clamp( 1.875rem , 1.6502808989rem  +  1.1235955056vw , 2.5rem )) {
+  .order-form-block__order-input:not(:last-child) {
+    margin-bottom: clamp( 1.875rem , 1.6502808989rem  +  1.1235955056vw , 2.5rem );
+  }
+}
+@supports not (margin-bottom: clamp( 1.875rem , 1.6502808989rem  +  1.1235955056vw , 2.5rem )) {
+  .order-form-block__order-input:not(:last-child) {
+    margin-bottom: calc(1.875rem + 0.625 * (100vw - 20rem) / 55.625);
+  }
 }
 .order-form-block__label {
   font-weight: 400;
@@ -3176,11 +3202,6 @@ body {
 .checkbox__label a {
   color: #19456B;
 }
-.order-form-block__order-block._sending::after {
-  opacity: 1;
-  visibility: visible;
-}
-
 @supports (padding-bottom: clamp( 1.875rem , 0.3019662921rem  +  7.8651685393vw , 6.25rem )) {
   .reviews__body {
     padding-bottom: clamp( 1.875rem , 0.3019662921rem  +  7.8651685393vw , 6.25rem );
