@@ -452,7 +452,7 @@ body {
 .button {
   position: relative;
   z-index: 2;
-  display: flex;
+  display: inline-flex;
   justify-content: end;
   align-items: center;
   padding: 0rem 0rem 0rem 1.125rem;
@@ -488,7 +488,7 @@ body {
   .button:hover {
     color: #0f0fb1;
     background-color: #ececec;
-    border: 1px solid #0f0fb1;
+    border: 1px solid #00008e;
     transition: color 0.5s ease 0s;
   }
   .button:hover::after {
@@ -3706,6 +3706,7 @@ body {
 }
 
 .block-message__body {
+  display: flex;
   padding: 0px 0px 100px 0px;
 }
 .swiper {
