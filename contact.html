@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220226171737">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220226194503">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -115,8 +115,29 @@
 			<section class="contactpage__message block-message">
 				<div class="block-message__container">
 					<div class="block-message__body">
-						<form class="block-message__form-message form-message"></form>
-						<div class="block-message__banner"></div>
+						<form action="#" id="messageForm" name="messageForm" class="block-message__form-message form-message">
+							<div class="form-message__inputs">
+								<div class="form-message__message-input">
+									<label for="messageName" class="form-message__label">Имя *</label>
+									<input autocomplete="off" id="messageName" name="messageName" type="text" placeholder="Введите имя" class="form-message__input _req">
+								</div>
+								<div class="form-message__message-input">
+									<label for="messageEmail" class="form-message__label">Email *</label>
+									<input autocomplete="off" id="messageEmail" name="messageEmail" type="text" placeholder="Введите Email" class="form-message__input _req _email">
+								</div>
+							</div>
+							<div class="form-message__message-input form-message__message-input_text">
+								<label for="messageText" class="form-message__label">Введите текст сообщения</label>
+								<textarea name="messageText" id="messageText" cols="30" rows="10" class="form-message__input _req"></textarea>
+							</div>
+							<div class="form-message__block-button">
+								<button type="submit" class="order-form-block__button-new button-form">Отправить</button>
+							</div>
+						</form>
+						<div class="block-message__banner banner">
+							<div class="banner__image"></div>
+							<a href="#/" class="banner__button button">Перейти</a>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -192,7 +213,7 @@
 </div> -->
 
 
-	<script src="js/app.min.js?_v=20220226171737"></script>
+	<script src="js/app.min.js?_v=20220226194503"></script>
 </body>
 
 </html>
