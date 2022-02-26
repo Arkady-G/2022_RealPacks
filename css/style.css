@@ -1365,14 +1365,14 @@ body {
   padding-right: 4.375rem;
   color: #FFFFFF;
 }
-@supports (width: clamp( 18.125rem , 16.1025280899rem  +  10.1123595506vw , 23.75rem )) {
+@supports (width: clamp( 16.25rem , 13.5533707865rem  +  13.4831460674vw , 23.75rem )) {
   .form-subscribe__input {
-    width: clamp( 18.125rem , 16.1025280899rem  +  10.1123595506vw , 23.75rem );
+    width: clamp( 16.25rem , 13.5533707865rem  +  13.4831460674vw , 23.75rem );
   }
 }
-@supports not (width: clamp( 18.125rem , 16.1025280899rem  +  10.1123595506vw , 23.75rem )) {
+@supports not (width: clamp( 16.25rem , 13.5533707865rem  +  13.4831460674vw , 23.75rem )) {
   .form-subscribe__input {
-    width: calc(18.125rem + 5.625 * (100vw - 20rem) / 55.625);
+    width: calc(16.25rem + 7.5 * (100vw - 20rem) / 55.625);
   }
 }
 .form-subscribe__input:focus {
@@ -1398,7 +1398,7 @@ body {
   font-family: "icons";
   font-size: 1.625rem;
   content: "\e92b";
-  right: 0px;
+  right: 50%;
   width: 3.5rem;
   height: 3.5rem;
   color: #FFFFFF;
@@ -3572,14 +3572,12 @@ body {
 .micro-block-contact {
   display: grid;
   grid-template-columns: auto auto;
-  justify-content: start;
-  background: #FFFFFF;
-  box-shadow: 0px 0.125rem 0.9375rem rgba(0, 0, 142, 0.100262);
   height: 100%;
+  justify-content: start;
+  background: #ffffff;
+  box-shadow: 0px 0.125rem 0.9375rem rgba(0, 0, 142, 0.100262);
 }
 .micro-block-contact::before {
-  grid-row-start: 1;
-  grid-row-end: 3;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3597,16 +3595,6 @@ body {
 @supports not (width: clamp( 3.75rem , 2.4016853933rem  +  6.7415730337vw , 7.5rem )) {
   .micro-block-contact::before {
     width: calc(3.75rem + 3.75 * (100vw - 20rem) / 55.625);
-  }
-}
-@supports (min-height: clamp( 3.125rem , 1.5519662921rem  +  7.8651685393vw , 7.5rem )) {
-  .micro-block-contact::before {
-    min-height: clamp( 3.125rem , 1.5519662921rem  +  7.8651685393vw , 7.5rem );
-  }
-}
-@supports not (min-height: clamp( 3.125rem , 1.5519662921rem  +  7.8651685393vw , 7.5rem )) {
-  .micro-block-contact::before {
-    min-height: calc(3.125rem + 4.375 * (100vw - 20rem) / 55.625);
   }
 }
 @supports (font-size: clamp( 1.75rem , 0.8735955056rem  +  4.3820224719vw , 4.1875rem )) {
@@ -3633,12 +3621,7 @@ body {
 }
 .micro-block-contact__item {
   padding: 0px 0.9375rem 0px 0.9375rem;
-}
-.micro-block-contact__item:not(:last-child) {
   margin-bottom: 1.875rem;
-}
-.micro-block-contact__content {
-  height: 100%;
 }
 @supports (padding-top: clamp( 0.625rem , 0.4002808989rem  +  1.1235955056vw , 1.25rem )) {
   .micro-block-contact__content {
