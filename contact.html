@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220226200343">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220226232957">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -126,9 +126,13 @@
 									<input autocomplete="off" id="messageEmail" name="messageEmail" type="text" placeholder="Введите Email" class="form-message__input _req _email">
 								</div>
 							</div>
-							<div class="form-message__message-input form-message__message-input_text">
-								<label for="messageText" class="form-message__label">Введите текст сообщения</label>
-								<textarea name="messageText" id="messageText" cols="30" rows="10" class="form-message__input _req"></textarea>
+							<div class="form-message__message-input_text">
+								<label for="messageText" class="form-message__label">Текст сообщения *</label>
+								<textarea name="messageText" id="messageText" placeholder="Напишите сообщение" class="form-message__input_text _req"></textarea>
+							</div>
+							<div class="form-message__checkbox-agreement checkbox">
+								<input id="checkboxAgreement" name="checkboxAgreement" type="checkbox" checked value="1" class="checkbox__input _req">
+								<label for="checkboxAgreement" class="checkbox__label"><span class="checkbox__label-text">Даю согласие на обработку персональных данных в соответствии с <a href="#/" class="checkbox__link-agreement">Условиями&nbsp;*</a></span></label>
 							</div>
 							<div class="form-message__block-button">
 								<button type="submit" class="order-form-block__button-new button-form">Отправить</button>
@@ -214,7 +218,7 @@
 </div> -->
 
 
-	<script src="js/app.min.js?_v=20220226200343"></script>
+	<script src="js/app.min.js?_v=20220226232957"></script>
 </body>
 
 </html>

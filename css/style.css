@@ -3707,7 +3707,158 @@ body {
 
 .block-message__body {
   display: flex;
-  padding: 0px 0px 100px 0px;
+}
+@supports (padding-top: clamp( 2.5rem , 1.1516853933rem  +  6.7415730337vw , 6.25rem )) {
+  .block-message__body {
+    padding-top: clamp( 2.5rem , 1.1516853933rem  +  6.7415730337vw , 6.25rem );
+  }
+}
+@supports not (padding-top: clamp( 2.5rem , 1.1516853933rem  +  6.7415730337vw , 6.25rem )) {
+  .block-message__body {
+    padding-top: calc(2.5rem + 3.75 * (100vw - 20rem) / 55.625);
+  }
+}
+@supports (padding-bottom: clamp( 2.5rem , 1.1516853933rem  +  6.7415730337vw , 6.25rem )) {
+  .block-message__body {
+    padding-bottom: clamp( 2.5rem , 1.1516853933rem  +  6.7415730337vw , 6.25rem );
+  }
+}
+@supports not (padding-bottom: clamp( 2.5rem , 1.1516853933rem  +  6.7415730337vw , 6.25rem )) {
+  .block-message__body {
+    padding-bottom: calc(2.5rem + 3.75 * (100vw - 20rem) / 55.625);
+  }
+}
+@media (max-width: 61.99875em) {
+  .block-message__body {
+    flex-direction: column;
+  }
+}
+@supports (padding-top: clamp( 1.25rem , 0.1264044944rem  +  5.6179775281vw , 4.375rem )) {
+  .block-message__form-message {
+    padding-top: clamp( 1.25rem , 0.1264044944rem  +  5.6179775281vw , 4.375rem );
+  }
+}
+@supports not (padding-top: clamp( 1.25rem , 0.1264044944rem  +  5.6179775281vw , 4.375rem )) {
+  .block-message__form-message {
+    padding-top: calc(1.25rem + 3.125 * (100vw - 20rem) / 55.625);
+  }
+}
+@supports (padding-right: clamp( 1.25rem , 0.8005617978rem  +  2.2471910112vw , 2.5rem )) {
+  .block-message__form-message {
+    padding-right: clamp( 1.25rem , 0.8005617978rem  +  2.2471910112vw , 2.5rem );
+  }
+}
+@supports not (padding-right: clamp( 1.25rem , 0.8005617978rem  +  2.2471910112vw , 2.5rem )) {
+  .block-message__form-message {
+    padding-right: calc(1.25rem + 1.25 * (100vw - 20rem) / 55.625);
+  }
+}
+@supports (padding-bottom: clamp( 1.25rem , 0.8005617978rem  +  2.2471910112vw , 2.5rem )) {
+  .block-message__form-message {
+    padding-bottom: clamp( 1.25rem , 0.8005617978rem  +  2.2471910112vw , 2.5rem );
+  }
+}
+@supports not (padding-bottom: clamp( 1.25rem , 0.8005617978rem  +  2.2471910112vw , 2.5rem )) {
+  .block-message__form-message {
+    padding-bottom: calc(1.25rem + 1.25 * (100vw - 20rem) / 55.625);
+  }
+}
+@supports (padding-left: clamp( 1.25rem , 0.8005617978rem  +  2.2471910112vw , 2.5rem )) {
+  .block-message__form-message {
+    padding-left: clamp( 1.25rem , 0.8005617978rem  +  2.2471910112vw , 2.5rem );
+  }
+}
+@supports not (padding-left: clamp( 1.25rem , 0.8005617978rem  +  2.2471910112vw , 2.5rem )) {
+  .block-message__form-message {
+    padding-left: calc(1.25rem + 1.25 * (100vw - 20rem) / 55.625);
+  }
+}
+@media (max-width: 61.99875em) {
+  .block-message__form-message:not(:last-child) {
+    margin-bottom: 3.125rem;
+  }
+}
+.form-message {
+  flex: 0 1 54%;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  box-shadow: 0px 2px 25px rgba(0, 0, 142, 0.152619);
+}
+.form-message__inputs {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px -1.25rem 0px -1.25rem;
+}
+.form-message__inputs:not(:last-child) {
+  margin-bottom: 1.875rem;
+}
+@media (max-width: 61.99875em) {
+  .form-message__inputs {
+    justify-content: start;
+    align-items: start;
+  }
+}
+@media (max-width: 47.99875em) {
+  .form-message__inputs {
+    flex-direction: column;
+  }
+}
+.form-message__message-input {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 1.25rem 0px 1.25rem;
+}
+.form-message__message-input_text {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.form-message__message-input_text:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+@media (max-width: 61.99875em) {
+  .form-message__message-input {
+    margin-bottom: 1.875rem;
+  }
+}
+.form-message__label {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.2142857143;
+  color: #6d6d6d;
+}
+.form-message__label:not(:last-child) {
+  margin-bottom: 0.3125rem;
+}
+.form-message__input {
+  max-width: 16.875rem;
+  height: 2.8125rem;
+  font-weight: 400;
+  line-height: 1.4705882353;
+  color: #382933;
+  border: 1px solid rgba(25, 69, 107, 0.2);
+  padding-left: 1.25rem;
+}
+.form-message__input_text {
+  max-width: 35rem;
+  min-height: 10.625rem;
+  font-weight: 400;
+  line-height: 1.4705882353;
+  color: #382933;
+  border: 1px solid rgba(25, 69, 107, 0.2);
+  padding-left: 1.25rem;
+}
+.form-message__checkbox-agreement:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+.form-message__block-button {
+  display: flex;
+  justify-content: end;
+}
+
+.banner {
+  padding: 0px 50px 0px 50px;
 }
 .swiper {
   overflow: hidden;
