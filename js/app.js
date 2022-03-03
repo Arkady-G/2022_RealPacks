@@ -4259,8 +4259,8 @@
         const da = new DynamicAdapt("max");
         da.init();
         window.addEventListener("load", (function(e) {
-            let mainBlock = document.querySelector(".mainpage__bg");
-            if (mainBlock) mainBlock.insertAdjacentHTML("beforeend", `<img src="img/mainpage/warehouse_02.jpg" alt="Image" class="mainpage__image-bg">`);
+            let mainBlock = document.querySelector(".main-block__bg");
+            if (mainBlock) mainBlock.insertAdjacentHTML("beforeend", `<img src="img/mainpage/warehouse_03.jpg" alt="Image" class="mainpage__image-bg">`);
         }));
         document.addEventListener("DOMContentLoaded", (function() {
             const orderForm = document.getElementById("orderForm");
@@ -4319,6 +4319,86 @@
                 return !/^\d[\d\(\)\ -]{4,14}\d$/.test(input.value);
             }
         }));
+        const popupLinks = document.querySelectorAll(".popup-link");
+        const body = document.querySelector("body");
+        const lockPadding = document.querySelectorAll(".lock-padding");
+        let unlock = true;
+        const timeout = 800;
+        if (popupLinks.length > 0) for (let index = 0; index < popupLinks.length; index++) {
+            const popupLink = popupLinks[index];
+            popupLink.addEventListener("click", (function(e) {
+                const popupName = popupLink.getAttribute("href").replace("#", "");
+                const currentPopup = document.getElementById(popupName);
+                popupOpen(currentPopup);
+                e.preventDefault();
+            }));
+        }
+        const popupCloseIcon = document.querySelectorAll(".close-popup");
+        if (popupCloseIcon.length > 0) for (let index = 0; index < popupCloseIcon.length; index++) {
+            const el = popupCloseIcon[index];
+            el.addEventListener("click", (function(e) {
+                popupClose(el.closest(".popup"));
+                e.preventDefault();
+            }));
+        }
+        function popupOpen(currentPopup) {
+            if (currentPopup && unlock) {
+                const popupActive = document.querySelector(".popup.open");
+                if (popupActive) popupClose(popupActive, false); else script_bodyLock();
+                currentPopup.classList.add("open");
+                currentPopup.addEventListener("click", (function(e) {
+                    if (!e.target.closest(".block-popup__content")) popupClose(e.target.closest(".popup"));
+                }));
+            }
+        }
+        function popupClose(popupActive, doUnlock = true) {
+            if (unlock) {
+                popupActive.classList.remove("open");
+                if (doUnlock) bodyUnLock();
+            }
+        }
+        function script_bodyLock() {
+            const lockPaddingValue = window.innerWidth - document.querySelector(".wrapper").offsetWidth + "px";
+            if (lockPadding.length < 0) for (let index = 0; index < lockPadding.length; index++) {
+                const el = lockPadding[index];
+                el.style.paddingRight = lockPaddingValue;
+            }
+            body.classList.add("lock");
+            unlock = false;
+            setTimeout((function() {
+                unlock = true;
+            }), timeout);
+        }
+        function bodyUnLock() {
+            setTimeout((function() {
+                if (lockPadding.length > 0) for (let index = 0; index < lockPadding.length; index++) {
+                    const el = lockPadding[index];
+                    el.style.paddingRight = "0px";
+                }
+                body.style.paddingRight = "0px";
+                body.classList.remove("lock");
+            }), timeout);
+            unlock = false;
+            setTimeout((function() {
+                unlock = true;
+            }), timeout);
+        }
+        document.addEventListener("keydown", (function(e) {
+            if (27 === e.which) {
+                const popupActive = document.querySelector(".popup.open");
+                popupClose(popupActive);
+            }
+        }));
+        (function() {
+            if (!Element.prototype.closest) Element.prototype.closest = function(css) {
+                var node = this;
+                while (node) if (node.matches(css)) return node; else node = node.parentElement;
+                return null;
+            };
+        })();
+        (function() {
+            if (!Element.prototype.matches) Element.prototype.matches = Element.prototype.matchesSelector || Element.prototype.webkitMatchesSelector || Element.prototype.mozMatchesSelector || Element.prototype.msMatchesSelector;
+        })();
         window["FLS"] = true;
         isWebp();
         menuInit();
