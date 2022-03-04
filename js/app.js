@@ -4278,7 +4278,7 @@
                         let result = await response.json();
                         alert(result.message);
                         orderForm.reset();
-                        orderForm.classList.remove("__sending");
+                        orderForm.classList.remove("_sending");
                         alert("Ваша заявка отправлена");
                     } else {
                         alert("Произошла ошибка");
@@ -4288,7 +4288,7 @@
             }
             function formValidate(orderForm) {
                 let error = 0;
-                let formReq = document.querySelectorAll("._req");
+                let formReq = orderForm.querySelectorAll("._req");
                 for (let index = 0; index < formReq.length; index++) {
                     const input = formReq[index];
                     formRemoveError(input);

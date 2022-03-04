@@ -1087,6 +1087,11 @@ body {
 .checkbox__label a {
   color: #19456b;
 }
+.order-form-block__order-block._sending::after {
+  opacity: 1;
+  visibility: visible;
+}
+
 .call-up__title:not(:last-child) {
   margin-bottom: 1.25rem;
 }
@@ -3580,6 +3585,9 @@ body {
 .contactpage {
   position: relative;
 }
+.page-main-block__block-header {
+  margin-bottom: 1.875rem;
+}
 @media (max-width: 29.99875em) {
   .contactpage-map {
     display: none;
@@ -4042,6 +4050,9 @@ body {
   padding: 0px 1.25rem 0px 1.25rem;
 }
 
+.page-main-block__block-header {
+  margin-bottom: 1.875rem;
+}
 .service-item {
   display: grid;
   grid-template-columns: 1fr;
@@ -4130,6 +4141,9 @@ body {
   }
 }
 
+.page-main-block__block-header {
+  margin-bottom: 1.875rem;
+}
 @supports (padding-top: clamp( 5.625rem , 2.029494382rem  +  17.9775280899vw , 15.625rem )) {
   .price-block__container {
     padding-top: clamp( 5.625rem , 2.029494382rem  +  17.9775280899vw , 15.625rem );
@@ -4303,6 +4317,9 @@ body {
   font-size: 0.875rem;
   margin-right: 0.625rem;
   color: #6d6d6d;
+}
+.page-main-block__block-header {
+  margin-bottom: 1.875rem;
 }
 @supports (padding-top: clamp( 5.625rem , 2.029494382rem  +  17.9775280899vw , 15.625rem )) {
   .description-about {
@@ -4618,6 +4635,9 @@ body {
   }
 }
 
+.page-main-block__block-header {
+  margin-bottom: 1.875rem;
+}
 .article-block__body {
   display: flex;
   margin: 0px -1.875rem 0px -1.875rem;
@@ -4830,6 +4850,9 @@ body {
   }
 }
 
+.page-main-block__block-header {
+  margin-bottom: 1.875rem;
+}
 .article-block__body {
   display: flex;
   margin: 0px -1.875rem 0px -1.875rem;
@@ -5042,6 +5065,9 @@ body {
   }
 }
 
+.page-main-block__block-header {
+  margin-bottom: 1.875rem;
+}
 .article-block__body {
   display: flex;
   margin: 0px -1.875rem 0px -1.875rem;
@@ -5254,6 +5280,9 @@ body {
   }
 }
 
+.page-main-block__block-header {
+  margin-bottom: 1.875rem;
+}
 .article-block__body {
   display: flex;
   margin: 0px -1.875rem 0px -1.875rem;
@@ -5466,6 +5495,9 @@ body {
   }
 }
 
+.page-main-block__block-header {
+  margin-bottom: 1.875rem;
+}
 .article-block__body {
   display: flex;
   margin: 0px -1.875rem 0px -1.875rem;
@@ -5678,6 +5710,9 @@ body {
   }
 }
 
+.page-main-block__block-header {
+  margin-bottom: 1.875rem;
+}
 .article-block__body {
   display: flex;
   margin: 0px -1.875rem 0px -1.875rem;
