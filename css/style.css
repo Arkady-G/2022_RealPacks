@@ -1012,14 +1012,14 @@ body {
   border: 1px solid rgba(25, 69, 107, 0.2);
   padding-left: 1.25rem;
 }
-@supports (max-width: clamp( 12.5rem , 10.2528089888rem  +  11.2359550562vw , 18.75rem )) {
+@supports (max-width: clamp( 14.375rem , 12.8019662921rem  +  7.8651685393vw , 18.75rem )) {
   .order-form-block__input {
-    max-width: clamp( 12.5rem , 10.2528089888rem  +  11.2359550562vw , 18.75rem );
+    max-width: clamp( 14.375rem , 12.8019662921rem  +  7.8651685393vw , 18.75rem );
   }
 }
-@supports not (max-width: clamp( 12.5rem , 10.2528089888rem  +  11.2359550562vw , 18.75rem )) {
+@supports not (max-width: clamp( 14.375rem , 12.8019662921rem  +  7.8651685393vw , 18.75rem )) {
   .order-form-block__input {
-    max-width: calc(12.5rem + 6.25 * (100vw - 20rem) / 55.625);
+    max-width: calc(14.375rem + 4.375 * (100vw - 20rem) / 55.625);
   }
 }
 .order-form-block__input:focus {
@@ -1097,6 +1097,7 @@ body {
 }
 .call-up__number-phone {
   display: block;
+  max-width: 70%;
 }
 .call-up__number-phone span {
   transition: color 0.5s ease 0s;
@@ -1723,7 +1724,9 @@ body {
 
 .form-subscribe {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
 }
 .form-subscribe__input {
   height: 3.4375rem;
@@ -1753,10 +1756,8 @@ body {
 
 .form-subscribe .button-subscribe {
   display: flex;
-  align-items: center;
+  align-items: end;
   position: relative;
-  width: 3.5rem;
-  height: 3.5rem;
 }
 .form-subscribe .button-subscribe::after {
   display: flex;

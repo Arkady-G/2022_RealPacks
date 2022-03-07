@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220304154928">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220307114952">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -70,7 +70,7 @@
 									</article>
 								</div>
 							</div>
-							<a href="#popupOrderForm" class="main-slider__button button popup-link">Сделать заявку</a>
+							<a href="#popupOrder" class="main-slider__button button popup-link">Сделать заявку</a>
 						</div>
 					</div>
 				</div>
@@ -177,7 +177,7 @@
 										<div class="micro-block-info__text-info">Пользователей в месяц</div>
 									</div>
 								</div>
-								<a href="#popupOrderForm" class="marketplace-name__button button popup-link">Сделать заявку</a>
+								<a href="#popupOrder" class="marketplace-name__button button popup-link">Сделать заявку</a>
 							</div>
 						</article>
 						<article class="marketplace-name__item marketplace-name__item_second">
@@ -194,7 +194,7 @@
 										<div class="micro-block-info__text-info">Заказов в сутки</div>
 									</div>
 								</div>
-								<a href="#popupOrderForm" class="marketplace-name__button button popup-link">Сделать заявку</a>
+								<a href="#popupOrder" class="marketplace-name__button button popup-link">Сделать заявку</a>
 							</div>
 							<div data-da=".marketplace-name__item_first, 1119.98,first" class="marketplace-name__image">
 								<picture><source data-srcset="img/mainpage/marketplace/ozon_02.webp" type="image/webp"><img data-src="img/mainpage/marketplace/ozon_02.jpg" alt="Image" class="marketplace-name__img"></picture>
@@ -268,18 +268,18 @@
 							</div>
 						</div>
 						<div class="order-form__form-block order-form-block">
-							<form action="#" id="orderForm" name="orderForm" class="order-form-block__order-block">
+							<form action="#" method="POST" id="orderForm" name="orderForm" class="order-form-block__order-block">
 								<div class="order-form-block__order-input">
 									<label for="orderName" class="order-form-block__label">Имя *</label>
-									<input autocomplete="off" id="orderName" name="orderName" type="text" placeholder="Введите имя" class="order-form-block__input _req">
+									<input autocomplete="off" id="orderName" data-validate-field="orderName" name="orderName" type="text" placeholder="Введите имя" class="order-form-block__input">
 								</div>
 								<div class="order-form-block__order-input">
 									<label for="orderPhone" class="order-form-block__label">Телефон *</label>
-									<input autocomplete="off" id="orderPhone" name="orderPhone" type="tel" placeholder="Введите телефон" class="order-form-block__input _req _phone">
+									<input autocomplete="off" id="orderPhone" data-validate-field="orderPhone" name="orderPhone" type="tel" placeholder="Введите телефон" class="order-form-block__input">
 								</div>
 								<div class="order-form-block__checkbox-agreement checkbox">
-									<input id="checkboxAgreement" name="checkboxAgreement" type="checkbox" checked value="1" class="checkbox__input _req">
-									<label for="checkboxAgreement" class="checkbox__label"><span class="checkbox__label-text">Даю согласие на обработку персональных данных в соответствии с <a href="#agreement" class="checkbox__link-agreement popup-link">Условиями&nbsp;*</a></span></label>
+									<input id="orderCheckboxAgreement" name="orderCheckboxAgreement" type="checkbox" checked value="1" class="checkbox__input">
+									<label for="orderCheckboxAgreement" class="checkbox__label"><span class="checkbox__label-text">Даю согласие на обработку персональных данных в соответствии с <a href="#agreement" class="checkbox__link-agreement popup-link">Условиями&nbsp;*</a></span></label>
 								</div>
 								<div class="order-form-block__block-button">
 									<button type="submit" class="order-form-block__button-new button-form">Отправить заявку</button>
@@ -401,7 +401,7 @@
 						<div class="top-footer__form-subscribe">
 							<div class="top-footer__title-subscribe">Подписаться на новости и акции</div>
 							<div class="top-footer__description-subscribe">Curabitur quis porttitor augue, et posuere ligula. Nunc sagittis vestibulum</div>
-							<form class="top-footer__form-subscribe form-subscribe">
+							<form id="formSubscribe" class="top-footer__form-subscribe form-subscribe">
 								<input type="email" name="emailSubscribe" id="emailSubscribe" placeholder="Введите Ваш Email" class="form-subscribe__input">
 								<button class="form-subscribe__button button-subscribe"></button>
 							</form>
@@ -431,7 +431,7 @@
 		</footer>
 	</div>
 
-	<section id="popupOrderForm" class="page__popup popup block-popup">
+	<section id="popupOrder" class="page__popup popup block-popup">
 		<div class="block-popup__container">
 			<div class="block-popup__body">
 				<div class="block-popup__content">
@@ -450,18 +450,18 @@
 							</div>
 						</div>
 						<div class="order-form__form-block order-form-block">
-							<form action="#" id="orderForm" name="orderForm" class="order-form-block__order-block">
+							<form action="#" id="orderFormPopup" name="orderFormPopup" class="order-form-block__order-block">
 								<div class="order-form-block__order-input">
-									<label for="orderName" class="order-form-block__label">Имя *</label>
-									<input autocomplete="off" id="orderName" name="orderName" type="text" placeholder="Введите имя" class="order-form-block__input _req">
+									<label for="orderNamePopup" class="order-form-block__label">Имя *</label>
+									<input autocomplete="off" id="orderNamePopup" name="orderNamePopup" type="text" placeholder="Введите имя" class="order-form-block__input _req">
 								</div>
 								<div class="order-form-block__order-input">
-									<label for="orderPhone" class="order-form-block__label">Телефон *</label>
-									<input autocomplete="off" id="orderPhone" name="orderPhone" type="tel" placeholder="Введите телефон" class="order-form-block__input _req _phone">
+									<label for="orderPhonePopup" class="order-form-block__label">Телефон *</label>
+									<input autocomplete="off" id="orderPhonePopup" name="orderPhonePopup" type="tel" placeholder="Введите телефон" class="order-form-block__input _req _phone">
 								</div>
 								<div class="order-form-block__checkbox-agreement checkbox">
-									<input id="checkboxAgreement" name="checkboxAgreement" type="checkbox" checked value="1" class="checkbox__input _req">
-									<label for="checkboxAgreement" class="checkbox__label"><span class="checkbox__label-text">Даю согласие на обработку персональных данных в соответствии с <a href="#agreement" class="checkbox__link-agreement popup-link">Условиями&nbsp;*</a></span></label>
+									<input id="checkboxAgreementPopup" name="checkboxAgreementPopup" type="checkbox" checked value="1" class="checkbox__input _req">
+									<label for="checkboxAgreementPopup" class="checkbox__label"><span class="checkbox__label-text">Даю согласие на обработку персональных данных в соответствии с <a href="#agreement" class="checkbox__link-agreement popup-link">Условиями&nbsp;*</a></span></label>
 								</div>
 								<div class="order-form-block__block-button">
 									<button type="submitOne" class="order-form-block__button-new button-form">Отправить заявку</button>
@@ -578,7 +578,7 @@
 		</div>
 	</section>
 
-	<script src="js/app.min.js?_v=20220304154928"></script>
+	<script src="js/app.min.js?_v=20220307114952"></script>
 </body>
 
 </html>
